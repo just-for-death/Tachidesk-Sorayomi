@@ -1,0 +1,16 @@
+workflows:
+  ios-release:
+    name: iOS IPA
+    max_build_duration: 60
+    environment:
+      flutter: stable
+      xcode: latest
+    scripts:
+      - name: Get packages
+        script: flutter pub get
+      - name: Codegen
+        script: dart run build_runner build --delete-conflicting-outputs
+      - name: Build IPA
+        script: flutter build ipa --release --no-codesign
+    artifacts:
+      - build/ios/ipa/*.ipa
