@@ -9,8 +9,6 @@ workflows:
     scripts:
       - name: Get packages
         script: flutter pub get
-      - name: Codegen
-        script: dart run build_runner build --delete-conflicting-outputs
       - name: Build IPA
         script: flutter build ipa --release --no-codesign
     artifacts:
