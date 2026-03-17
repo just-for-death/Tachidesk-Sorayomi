@@ -213,15 +213,16 @@ class ContinuousReaderMode extends HookConsumerWidget {
                   value: downloadProgress.progress,
                 ),
               ),
-              wrapper: (Widget child) => SizedBox(
-                height: scrollDirection == Axis.vertical
-                    ? context.height * .7
-                    : null,
-                width: scrollDirection != Axis.vertical
-                    ? context.width * .7
-                    : null,
-                child: child,
-              ),
+              // For vertical (webtoon) mode: let images size to their natural
+              // aspect ratio — a fixed height breaks downloaded/local images
+              // because they don't know dimensions in advance like network images.
+              // For horizontal mode: constrain width to 70% as before.
+              wrapper: scrollDirection == Axis.vertical
+                  ? null
+                  : (Widget child) => SizedBox(
+                        width: context.width * .7,
+                        child: child,
+                      ),
             );
 
             if (index == 0 || index == chapterPages.chapter.pageCount - 1) {

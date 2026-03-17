@@ -55,13 +55,15 @@ class ServerImage extends HookConsumerWidget {
     final uri = Uri.tryParse(imageUrl);
     if (uri != null && uri.scheme == 'file') {
       final file = File.fromUri(uri);
+      // Use fitWidth as default for local files so webtoon segments expand to
+      // full width and keep their natural height — avoids white gaps between pages.
       return AppUtils.wrapOn(
         wrapper,
         Image.file(
           file,
           height: size?.height,
           width: size?.width,
-          fit: fit ?? BoxFit.cover,
+          fit: fit ?? BoxFit.fitWidth,
           errorBuilder: (context, _, __) => const Icon(
             Icons.broken_image_rounded,
             color: Colors.grey,
