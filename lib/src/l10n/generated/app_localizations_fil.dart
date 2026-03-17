@@ -1292,4 +1292,62 @@ class AppLocalizationsFil extends AppLocalizations {
   @override
   String get autoRefreshRetryDelayDescription =>
       'Delay between auto retry attempts (in seconds)';
+
+  @override
+  String get trackers => 'Trackers';
+
+  @override
+  String get tracking => 'Tracking';
+
+  @override
+  String get addTracking => 'Add Tracking';
+
+  @override
+  String get trackingSearch => 'Search on tracker...';
+
+  @override
+  String get trackingStatus => 'Status';
+
+  @override
+  String get trackingScore => 'Score';
+
+  @override
+  String get trackingLastChapter => 'Last Chapter Read';
+
+  @override
+  String get trackingStartDate => 'Start Date';
+
+  @override
+  String get trackingFinishDate => 'Finish Date';
+
+  @override
+  String get trackingRemoveConfirm => 'Remove tracking?';
+
+  @override
+  String get trackingRemoveDescription =>
+      'This will remove the tracking entry from Sorayomi. The entry on the tracker service will not be deleted.';
+
+  @override
+  String get trackingRemoveAlsoRemote => 'Also delete from tracker service';
+
+  @override
+  String get logIn => 'Log In';
+
+  @override
+  String get logOut => 'Log Out';
+
+  @override
+  String get loggedIn => 'Logged in';
+
+  @override
+  String get notLoggedIn => 'Not logged in';
+
+  @override
+  String get noTrackingFound => 'No tracking entries yet';
+
+  @override
+  String get trackerNoResults => 'No results found on tracker';
+
+  @override
+  String get syncNow => 'Sync now';
 }

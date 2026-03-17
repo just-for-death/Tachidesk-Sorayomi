@@ -46,6 +46,7 @@ class SmallScreenMangaDetails extends ConsumerWidget {
             child: SingleChildScrollView(
               child: MangaDescription(
                 manga: manga,
+                mangaId: mangaId,
                 refresh: () => onDescriptionRefresh(false),
                 removeMangaFromLibrary: () => ref
                     .read(mangaBookRepositoryProvider)

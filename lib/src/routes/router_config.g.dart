@@ -159,6 +159,10 @@ RouteBase get $quickSearchRoute => ShellRouteData.$route(
                           path: 'downloads',
                           factory: $DownloadsSettingsRouteExtension._fromState,
                         ),
+                        GoRouteData.$route(
+                          path: 'trackers',
+                          factory: $TrackerSettingsRouteExtension._fromState,
+                        ),
                       ],
                     ),
                   ],
@@ -625,6 +629,24 @@ extension $DownloadsSettingsRouteExtension on DownloadsSettingsRoute {
 
   String get location => GoRouteData.$location(
         '/more/settings/downloads',
+      );
+
+  void go(BuildContext context) => context.go(location);
+
+  Future<T?> push<T>(BuildContext context) => context.push<T>(location);
+
+  void pushReplacement(BuildContext context) =>
+      context.pushReplacement(location);
+
+  void replace(BuildContext context) => context.replace(location);
+}
+
+extension $TrackerSettingsRouteExtension on TrackerSettingsRoute {
+  static TrackerSettingsRoute _fromState(GoRouterState state) =>
+      const TrackerSettingsRoute();
+
+  String get location => GoRouteData.$location(
+        '/more/settings/trackers',
       );
 
   void go(BuildContext context) => context.go(location);

@@ -107,6 +107,44 @@ GraphQLClient graphQlSubscriptionClient(Ref ref) {
   );
 }
 
+
+/// GraphQL client with a longer timeout for tracker operations.
+/// Tracker queries call external APIs (MAL, AniList, etc.) which can be slow.
+@riverpod
+GraphQLClient trackerGraphQlClient(Ref ref) {
+  final authType = ref.watch(authTypeKeyProvider) ?? DBKeys.authType.initial;
+  final credentials = ref.watch(credentialsProvider);
+
+  Link link = HttpLink(
+    Endpoints.baseApi(
+      baseUrl: ref.watch(serverUrlProvider) ?? DBKeys.serverUrl.initial,
+      port: ref.watch(serverPortProvider),
+      addPort: ref.watch(serverPortToggleProvider).ifNull(),
+      isGraphQl: true,
+    ),
+    followRedirects: true,
+    defaultHeaders: {'Content-Type': 'application/json; charset=utf-8'},
+    httpClient: TimeoutHttpClient(
+      const Duration(seconds: 30), // tracker APIs can be slow
+      retries: 0,
+    ),
+  );
+
+  if (authType == AuthType.basic && credentials.isNotBlank) {
+    final AuthLink authLink = AuthLink(getToken: () => credentials);
+    link = authLink.concat(link);
+  }
+
+  final loggerLink = LoggerLink();
+  return GraphQLClient(
+    link: loggerLink.concat(link),
+    defaultPolicies: DefaultPolicies(
+      query: Policies(fetch: FetchPolicy.noCache),
+    ),
+    cache: GraphQLCache(store: ref.watch(hiveStoreProvider)),
+  );
+}
+
 @riverpod
 ValueNotifier<GraphQLClient> graphQlClientNotifier(Ref ref) {
   final notifier = ValueNotifier(ref.watch(graphQlClientProvider));

@@ -93,3 +93,10 @@ class DownloadsSettingsRoute extends GoRouteData {
   @override
   Widget build(context, state) => const DownloadsSettingsScreen();
 }
+
+class TrackerSettingsRoute extends GoRouteData {
+  const TrackerSettingsRoute();
+
+  @override
+  Widget build(context, state) => const TrackerSettingsScreen();
+}

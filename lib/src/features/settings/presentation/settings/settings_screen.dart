@@ -60,6 +60,11 @@ class SettingsScreen extends StatelessWidget {
             leading: const Icon(Icons.computer_rounded),
             onTap: () => const ServerSettingsRoute().go(context),
           ),
+          ListTile(
+            title: Text('Trackers'),
+            leading: const Icon(Icons.track_changes_rounded),
+            onTap: () => const TrackerSettingsRoute().go(context),
+          ),
         ],
       ),
     );

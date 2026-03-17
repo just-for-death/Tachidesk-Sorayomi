@@ -17,16 +17,19 @@ import '../../../../../utils/misc/toast/toast.dart';
 import '../../../../../widgets/async_buttons/async_text_button_icon.dart';
 import '../../../../../widgets/manga_cover/list/manga_cover_descriptive_list_tile.dart';
 import '../../../domain/manga/manga_model.dart';
+import '../../../../tracking/presentation/manga_tracker_sheet.dart';
 
 class MangaDescription extends HookConsumerWidget {
   const MangaDescription({
     super.key,
     required this.manga,
+    required this.mangaId,
     required this.removeMangaFromLibrary,
     required this.addMangaToLibrary,
     required this.refresh,
   });
   final MangaDto manga;
+  final int mangaId;
   final AsyncCallback refresh;
   final AsyncCallback removeMangaFromLibrary;
   final AsyncCallback addMangaToLibrary;
@@ -82,6 +85,16 @@ class MangaDescription extends HookConsumerWidget {
                   style: TextButton.styleFrom(foregroundColor: Colors.grey),
                   label: Text(context.l10n.webView),
                 ),
+              TextButton.icon(
+                onPressed: () => showMangaTrackerSheet(
+                  context,
+                  mangaId,
+                  manga.title,
+                ),
+                icon: const Icon(Icons.track_changes_rounded),
+                style: TextButton.styleFrom(foregroundColor: Colors.grey),
+                label: Text('Tracking'),
+              ),
             ],
           ),
         ),

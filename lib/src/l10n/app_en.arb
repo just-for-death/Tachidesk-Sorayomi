@@ -1174,8 +1174,8 @@
     "migrationPreview": "Migration Preview",
     "migrationInProgress": "Migration in Progress",
     "migrationComplete": "Migration completed successfully",
-    "migrationFailed": "Migration failed",
-    "migrationCancelled": "Migration cancelled",
+    "migrationFailed": "Migration Failed",
+    "migrationCancelled": "Migration Cancelled",
     "migrateChapters": "Migrate Chapters",
     "migrateChaptersDescription": "Copy chapter read status to new source",
     "migrateCategories": "Migrate Categories",
@@ -1184,8 +1184,6 @@
     "migrateDownloadsDescription": "Move downloaded chapters to new source",
     "migrateTracking": "Migrate Tracking",
     "migrateTrackingDescription": "Copy tracking information to new source",
-    "migrationPreview": "Migration Preview",
-    "migrationInProgress": "Migration in Progress",
     "migrationOptions": "Migration Options",
     "migrationSettings": "Migration Settings",
     "selectTargetSource": "Select Target Source",
@@ -1207,7 +1205,7 @@
     "tryDifferentSearch": "Try a different search term",
     "searchError": "Search error",
     "importantNotice": "Important Notice",
-    "migrationWarning": "Migration will replace the current manga with the selected one. This action cannot be undone. Make sure you have selected the correct target manga.",
+    "migrationWarning": "This will permanently move your manga data. This action cannot be undone.",
     "deleteSourceWarning": "The original manga will be removed from your library after migration.",
     "confirmMigration": "Confirm Migration",
     "migrationConfirmationMessage": "Are you sure you want to migrate this manga? This action cannot be undone.",
@@ -1215,8 +1213,6 @@
     "preparingMigration": "Preparing migration...",
     "migrationCompleted": "Migration Completed!",
     "migrationSuccessMessage": "Your manga has been successfully migrated to the new source.",
-    "migrationFailed": "Migration Failed",
-    "migrationCancelled": "Migration Cancelled",
     "migrationCancelledMessage": "The migration process has been cancelled. No changes were made.",
     "cancelMigration": "Cancel Migration",
     "cancelMigrationConfirmation": "Are you sure you want to cancel the migration? This action cannot be undone.",
@@ -1237,8 +1233,6 @@
     "searchingAllSources": "Searching across all available sources...",
     "noMatchingMangaFound": "No matching manga found in any source",
     "deleteSourceAfterMigration": "Delete source manga after migration",
-    "confirmMigration": "Confirm Migration",
-    "migrationWarning": "This will permanently move your manga data. This action cannot be undone.",
     "reload": "Reload",
     "remove": "Remove",
     "removeFromLibrary": "Remove from Library?",
@@ -1275,7 +1269,6 @@
     "socksUserName": "SOCKS UserName",
     "socksVersion": "SOCKS Version",
     "sort": "Sort",
-    "source": "Source",
     "sourceTypeFilter": "Filter",
     "sourceTypeLatest": "Latest",
     "sourceTypePopular": "Popular",
@@ -1321,12 +1314,94 @@
     "removeFromHistoryConfirmation": "Are you sure you want to remove this chapter from your reading history?",
     "timeoutSettings": "Timeout Settings",
     "serverRequestTimeout": "Server Request Timeout",
-    "@serverRequestTimeout": {"description": "Controls how long to wait for server responses"},
+    "@serverRequestTimeout": {
+        "description": "Controls how long to wait for server responses"
+    },
     "serverRequestTimeoutDescription": "Time to wait for server responses (in seconds)",
     "autoRefreshOnTimeout": "Auto-refresh on Timeout",
-    "@autoRefreshOnTimeout": {"description": "Toggle automatic retry on timeout"},
+    "@autoRefreshOnTimeout": {
+        "description": "Toggle automatic retry on timeout"
+    },
     "autoRefreshOnTimeoutDescription": "Automatically retries requests that timeout",
     "autoRefreshRetryDelay": "Auto-refresh Retry Delay",
-    "@autoRefreshRetryDelay": {"description": "Delay between auto retry attempts in seconds"},
-    "autoRefreshRetryDelayDescription": "Delay between auto retry attempts (in seconds)"
+    "@autoRefreshRetryDelay": {
+        "description": "Delay between auto retry attempts in seconds"
+    },
+    "autoRefreshRetryDelayDescription": "Delay between auto retry attempts (in seconds)",
+    "trackers": "Trackers",
+    "@trackers": {
+        "description": "Trackers settings section title"
+    },
+    "tracking": "Tracking",
+    "@tracking": {
+        "description": "Tracking button on manga page"
+    },
+    "addTracking": "Add Tracking",
+    "@addTracking": {
+        "description": "Button to add a new tracker binding"
+    },
+    "trackingSearch": "Search on tracker...",
+    "@trackingSearch": {
+        "description": "Hint text for tracker search field"
+    },
+    "trackingStatus": "Status",
+    "@trackingStatus": {
+        "description": "Label for tracking status field"
+    },
+    "trackingScore": "Score",
+    "@trackingScore": {
+        "description": "Label for tracking score field"
+    },
+    "trackingLastChapter": "Last Chapter Read",
+    "@trackingLastChapter": {
+        "description": "Label for last chapter read field"
+    },
+    "trackingStartDate": "Start Date",
+    "@trackingStartDate": {
+        "description": "Label for start date field"
+    },
+    "trackingFinishDate": "Finish Date",
+    "@trackingFinishDate": {
+        "description": "Label for finish date field"
+    },
+    "trackingRemoveConfirm": "Remove tracking?",
+    "@trackingRemoveConfirm": {
+        "description": "Confirm remove tracking dialog title"
+    },
+    "trackingRemoveDescription": "This will remove the tracking entry from Sorayomi. The entry on the tracker service will not be deleted.",
+    "@trackingRemoveDescription": {
+        "description": "Confirm remove tracking dialog body"
+    },
+    "trackingRemoveAlsoRemote": "Also delete from tracker service",
+    "@trackingRemoveAlsoRemote": {
+        "description": "Checkbox to also delete remote tracker entry"
+    },
+    "logIn": "Log In",
+    "@logIn": {
+        "description": "Log in button label"
+    },
+    "logOut": "Log Out",
+    "@logOut": {
+        "description": "Log out button label"
+    },
+    "loggedIn": "Logged in",
+    "@loggedIn": {
+        "description": "Status label for logged-in tracker"
+    },
+    "notLoggedIn": "Not logged in",
+    "@notLoggedIn": {
+        "description": "Status label for not-logged-in tracker"
+    },
+    "noTrackingFound": "No tracking entries yet",
+    "@noTrackingFound": {
+        "description": "Empty state for manga tracker sheet"
+    },
+    "trackerNoResults": "No results found on tracker",
+    "@trackerNoResults": {
+        "description": "Empty state for tracker search"
+    },
+    "syncNow": "Sync now",
+    "@syncNow": {
+        "description": "Sync tracker button label"
+    }
 }

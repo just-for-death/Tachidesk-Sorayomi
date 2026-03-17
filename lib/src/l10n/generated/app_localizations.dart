@@ -2427,6 +2427,120 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Delay between auto retry attempts (in seconds)'**
   String get autoRefreshRetryDelayDescription;
+
+  /// Trackers settings section title
+  ///
+  /// In en, this message translates to:
+  /// **'Trackers'**
+  String get trackers;
+
+  /// Tracking button on manga page
+  ///
+  /// In en, this message translates to:
+  /// **'Tracking'**
+  String get tracking;
+
+  /// Button to add a new tracker binding
+  ///
+  /// In en, this message translates to:
+  /// **'Add Tracking'**
+  String get addTracking;
+
+  /// Hint text for tracker search field
+  ///
+  /// In en, this message translates to:
+  /// **'Search on tracker...'**
+  String get trackingSearch;
+
+  /// Label for tracking status field
+  ///
+  /// In en, this message translates to:
+  /// **'Status'**
+  String get trackingStatus;
+
+  /// Label for tracking score field
+  ///
+  /// In en, this message translates to:
+  /// **'Score'**
+  String get trackingScore;
+
+  /// Label for last chapter read field
+  ///
+  /// In en, this message translates to:
+  /// **'Last Chapter Read'**
+  String get trackingLastChapter;
+
+  /// Label for start date field
+  ///
+  /// In en, this message translates to:
+  /// **'Start Date'**
+  String get trackingStartDate;
+
+  /// Label for finish date field
+  ///
+  /// In en, this message translates to:
+  /// **'Finish Date'**
+  String get trackingFinishDate;
+
+  /// Confirm remove tracking dialog title
+  ///
+  /// In en, this message translates to:
+  /// **'Remove tracking?'**
+  String get trackingRemoveConfirm;
+
+  /// Confirm remove tracking dialog body
+  ///
+  /// In en, this message translates to:
+  /// **'This will remove the tracking entry from Sorayomi. The entry on the tracker service will not be deleted.'**
+  String get trackingRemoveDescription;
+
+  /// Checkbox to also delete remote tracker entry
+  ///
+  /// In en, this message translates to:
+  /// **'Also delete from tracker service'**
+  String get trackingRemoveAlsoRemote;
+
+  /// Log in button label
+  ///
+  /// In en, this message translates to:
+  /// **'Log In'**
+  String get logIn;
+
+  /// Log out button label
+  ///
+  /// In en, this message translates to:
+  /// **'Log Out'**
+  String get logOut;
+
+  /// Status label for logged-in tracker
+  ///
+  /// In en, this message translates to:
+  /// **'Logged in'**
+  String get loggedIn;
+
+  /// Status label for not-logged-in tracker
+  ///
+  /// In en, this message translates to:
+  /// **'Not logged in'**
+  String get notLoggedIn;
+
+  /// Empty state for manga tracker sheet
+  ///
+  /// In en, this message translates to:
+  /// **'No tracking entries yet'**
+  String get noTrackingFound;
+
+  /// Empty state for tracker search
+  ///
+  /// In en, this message translates to:
+  /// **'No results found on tracker'**
+  String get trackerNoResults;
+
+  /// Sync tracker button label
+  ///
+  /// In en, this message translates to:
+  /// **'Sync now'**
+  String get syncNow;
 }
 
 class _AppLocalizationsDelegate
